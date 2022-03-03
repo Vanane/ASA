@@ -6,6 +6,7 @@ public abstract class Component {
     private Port[] ports;
     private Service[] services;
     private Complex parentComponent;
+    private Configuration parentConfiguration;
     
     public String getName() {
         return name;
@@ -46,5 +47,14 @@ public abstract class Component {
     public void setParentComponent(Complex parentComponent) {
         this.parentComponent = parentComponent;
     }
+
+    public Configuration getParentConfiguration() {
+        return parentConfiguration;
+    }
+
+    public void setParentConfiguration(Configuration parentConfiguration) {
+        this.parentConfiguration = parentConfiguration;
+    }
+    
     
 }
