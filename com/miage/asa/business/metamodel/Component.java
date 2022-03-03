@@ -1,12 +1,10 @@
 package com.miage.asa.business.metamodel;
 
 public abstract class Component {
-    private String name;
-    private String description;
-    private Port[] ports;
-    private Service[] services;
-    private Complex parentComponent;
-    private Configuration parentConfiguration;
+    protected String name;
+    protected String description;
+    protected Complex parentComponent;
+    protected Configuration parentConfiguration;
     
     public String getName() {
         return name;
@@ -22,22 +20,6 @@ public abstract class Component {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Port[] getPorts() {
-        return ports;
-    }
-
-    public void setPorts(Port[] ports) {
-        this.ports = ports;
-    }
-
-    public Service[] getServices() {
-        return services;
-    }
-
-    public void setServices(Service[] services) {
-        this.services = services;
     }
 
     public Complex getParentComponent() {

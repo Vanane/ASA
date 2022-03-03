@@ -1,7 +1,7 @@
 package com.miage.asa.business.metamodel;
 
 public class Binding {
-    private Port inPort, outPort;
+    protected Port inPort, outPort;
 
     public Port getInPort() {
         return inPort;

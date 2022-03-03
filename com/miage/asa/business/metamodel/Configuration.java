@@ -1,8 +1,8 @@
 package com.miage.asa.business.metamodel;
 
 public class Configuration {
-    private Component[] components;
-    private Connector[] connectors;
+    protected Component[] components;
+    protected Connector[] connectors;
     
     public Component[] getComponents() {
         return components;

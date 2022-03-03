@@ -1,7 +1,7 @@
 package com.miage.asa.business.metamodel;
 
 public class ServiceConnector extends Connector {
-    private Service inService, outService;
+    protected Service inService, outService;
 
     public Service getInService() {
         return inService;

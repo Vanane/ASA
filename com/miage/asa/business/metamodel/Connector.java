@@ -1,7 +1,7 @@
 package com.miage.asa.business.metamodel;
 
 public abstract class Connector {
-    private Configuration parentConfiguration;
+    protected Configuration parentConfiguration;
 
     public Configuration getParentConfiguration() {
         return parentConfiguration;

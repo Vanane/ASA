@@ -1,7 +1,13 @@
 package com.miage.asa.business.metamodel;
 
 public class PortConnector extends Connector {
-    private Port inPort, outPort;
+    protected Port inPort, outPort;
+
+    public PortConnector(Port in, Port out)
+    {
+        inPort = in;
+        outPort = out;
+    }
 
     public Port getInPort() {
         return inPort;

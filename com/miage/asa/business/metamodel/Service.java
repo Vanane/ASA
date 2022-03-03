@@ -1,10 +1,10 @@
 package com.miage.asa.business.metamodel;
 
 public class Service {
-    private Binding bindedTo;
-    private Component parentComponent;
-    private Connector connectedTo;
-    private PortType portType;
+    protected Binding bindedTo;
+    protected Component parentComponent;
+    protected Connector connectedTo;
+    priprotectedvate PortType portType;
         
     public Binding getBindedTo() {
         return bindedTo;
