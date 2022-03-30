@@ -7,6 +7,9 @@ public class PortConnector extends Connector {
     {
         inPort = in;
         outPort = out;
+        
+        inPort.setConnectedTo(this);
+        outPort.setConnectedTo(this);
     }
 
     public Port getInPort() {

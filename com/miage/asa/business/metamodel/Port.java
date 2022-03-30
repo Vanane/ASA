@@ -3,7 +3,7 @@ package com.miage.asa.business.metamodel;
 public class Port {
     protected Binding bindedTo;
     protected Component parentComponent;
-    protected Connector connectedTo;
+    protected PortConnector connector;
     protected PortType portType;
     
     public Binding getBindedTo() {
@@ -18,11 +18,11 @@ public class Port {
     public void setParentComponent(Component parentComponent) {
         this.parentComponent = parentComponent;
     }
-    public Connector getConnectedTo() {
-        return connectedTo;
+    public PortConnector getConnectedTo() {
+        return connector;
     }
-    public void setConnectedTo(Connector connectedTo) {
-        this.connectedTo = connectedTo;
+    public void setConnectedTo(PortConnector connectedTo) {
+        this.connector = connectedTo;
     }
     public PortType getPortType() {
         return portType;

@@ -7,4 +7,23 @@ import com.miage.asa.business.simpleCS.server.serverDetail.ports.SecurityAuthent
 public class SecurityManager extends Simple {
     private CheckQuery checkQueryPort;
     private SecurityAuthentication securityAuthenticationPort;
+    
+    
+    public SecurityManager()
+    {
+    	checkQueryPort = new CheckQuery();
+    	checkQueryPort.setParentComponent(this);
+    	securityAuthenticationPort = new SecurityAuthentication();
+    	securityAuthenticationPort.setParentComponent(this);
+    }
+
+
+	public CheckQuery getCheckQueryPort() {
+		return checkQueryPort;
+	}
+
+
+	public SecurityAuthentication getSecurityAuthenticationPort() {
+		return securityAuthenticationPort;
+	}
 }

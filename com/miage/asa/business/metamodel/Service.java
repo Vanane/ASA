@@ -4,7 +4,7 @@ public class Service {
     protected Binding bindedTo;
     protected Component parentComponent;
     protected Connector connectedTo;
-    priprotectedvate PortType portType;
+    protected PortType portType;
         
     public Binding getBindedTo() {
         return bindedTo;

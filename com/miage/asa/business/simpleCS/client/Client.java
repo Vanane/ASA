@@ -5,18 +5,14 @@ import com.miage.asa.business.metamodel.Simple;
 public class Client extends Simple {
     private SendRequest sendRequestPort;
 
+    public Client()
+    {
+    	this.sendRequestPort = new SendRequest();
+    	this.sendRequestPort.setParentComponent(this);
+    }
+    
+    
     public SendRequest getSendRequestPort() {
         return sendRequestPort;
     }
-
-    public void setSendRequestPort(SendRequest sendRequestPort) {
-        this.sendRequestPort = sendRequestPort;
-    }
-
-
-    public void sendGET()
-    {
-        sendRequestPort.sendMessage();
-        System.out.println("Sent GET request to Server");
-    }   
 }
