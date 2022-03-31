@@ -1,6 +1,7 @@
 package com.miage.asa.business.metamodel;
 
-public class Configuration {
+public abstract class Configuration {
+	protected Component parentComponent;
     protected Component[] components;
     protected Connector[] connectors;
     

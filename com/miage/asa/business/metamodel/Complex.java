@@ -1,6 +1,6 @@
 package com.miage.asa.business.metamodel;
 
-public class Complex extends Component {
+public abstract class Complex extends Component {
     protected Component[] children;
 
     public Component[] getChildren() {

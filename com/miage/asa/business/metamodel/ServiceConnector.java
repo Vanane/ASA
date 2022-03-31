@@ -1,6 +1,6 @@
 package com.miage.asa.business.metamodel;
 
-public class ServiceConnector extends Connector {
+public abstract class ServiceConnector extends Connector {
     protected Service inService, outService;
 
     public Service getInService() {

@@ -1,6 +1,6 @@
 package com.miage.asa.business.metamodel;
 
-public class Service {
+public abstract class Service {
     protected Binding bindedTo;
     protected Component parentComponent;
     protected Connector connectedTo;

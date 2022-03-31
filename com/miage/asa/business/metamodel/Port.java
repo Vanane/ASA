@@ -1,6 +1,8 @@
 package com.miage.asa.business.metamodel;
 
-public class Port {
+import java.util.HashMap;
+
+public abstract class Port {
     protected Binding bindedTo;
     protected Component parentComponent;
     protected PortConnector connector;
@@ -30,4 +32,9 @@ public class Port {
     public void setPortType(PortType portType) {
         this.portType = portType;
     }
+    
+    
+    public abstract Object sendCommand(HashMap<String, Object> args);
+    
+    public abstract Object receiveCommand(HashMap<String, Object> args);
 }

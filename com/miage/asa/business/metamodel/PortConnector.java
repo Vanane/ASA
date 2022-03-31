@@ -1,30 +1,25 @@
 package com.miage.asa.business.metamodel;
 
-public class PortConnector extends Connector {
-    protected Port inPort, outPort;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public abstract class PortConnector extends Connector {
+    protected HashMap<Port, Port> gluePorts;
 
     public PortConnector(Port in, Port out)
     {
-        inPort = in;
-        outPort = out;
-        
-        inPort.setConnectedTo(this);
-        outPort.setConnectedTo(this);
+    	in.setConnectedTo(this);
+    	out.setConnectedTo(this);
+    	
+    	gluePorts = new HashMap<>();
+    	gluePorts.put(in, out);
     }
-
-    public Port getInPort() {
-        return inPort;
-    }
-
-    public void setInPort(Port inPort) {
-        this.inPort = inPort;
-    }
-
-    public Port getOutPort() {
-        return outPort;
-    }
-
-    public void setOutPort(Port outPort) {
-        this.outPort = outPort;
+    
+    
+    @Override public Object sendCommandFrom(Port source, HashMap<String,Object> args)
+    {
+    	if(!gluePorts.containsKey(source)) return null;
+		return gluePorts.get(source).receiveCommand(args);
     }
 }

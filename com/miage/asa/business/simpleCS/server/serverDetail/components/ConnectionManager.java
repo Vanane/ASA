@@ -14,7 +14,6 @@ public class ConnectionManager extends Simple {
     private DBQuery dbQueryPort;
     private ExternalSocket externalSocketPort;
     
-    
     public ConnectionManager()
     {
     	securityCheckPort = new SecurityCheck();

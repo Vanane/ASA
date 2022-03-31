@@ -1,6 +1,8 @@
 package com.miage.asa.business.metamodel;
 
-public class Binding {
+import java.util.HashMap;
+
+public abstract class Binding {
     protected Port inPort, outPort;
 
     public Binding(Port in, Port out)
@@ -23,5 +25,14 @@ public class Binding {
 
     public void setOutPort(Port outPort) {
         this.outPort = outPort;
+    }
+    
+    
+    public Object sendCommandFrom(Port source, HashMap<String,Object> args)
+    {
+    	if(source == inPort)
+    		return outPort.receiveCommand(args);
+    	else
+			return inPort.receiveCommand(args);
     }
 }
